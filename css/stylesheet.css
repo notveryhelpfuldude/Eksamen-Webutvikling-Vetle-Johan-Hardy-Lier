@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+#grid-container {
+    display: grid;
+    grid-template-areas: 'nav nav' 'header header' 'main main' 'footer footer';
+}
+nav {
+    grid-area: nav;
+    background-color: #fff;
+}
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+    background-color: #fff
+}
+footer {
+    grid-area: footer;
+    background-color: #fff;
+}
+.flex-container {
+    padding:0px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+}
+header section {
+    padding: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav section {
+    display: flex;
+    flex-flow: wrap;   
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+nav section div {
+    display: flex;
+}
+.navigation {
+    display: flex;
+}
+.navigation li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+.button-style {
+    background-color:#e6bd43;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /* Denne Box shadow er hentet fra W3schools.com*/
+}
+.headline {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: grey;
+}
+.headline-content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color:aqua;
+    padding: 20px;
+}
+.vid-back {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.subheading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-top: 20px;
+}
+h1 {
+    text-align: center;
+    font-size: x-large;
+}
+h2 {
+    text-align: center;
+}
+.headline p, .subheading p {
+    margin: 40px;
+}
+@media (max-width: 768px) {
+    nav section {
+        justify-content: center;
+    }
+    .headline p {
+        margin: 20px;
+    }
+
+}
