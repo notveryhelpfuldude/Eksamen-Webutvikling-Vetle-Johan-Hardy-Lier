@@ -6,53 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div id="grid-container">
-        <nav>
-            <section class="flex-container">
-                <div class ="flex-nav">
-                    <img src="resource/logo1.png" alt="logo">
-                </div>
-                <div>
-                    <ul class="navigation">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="about.html">About</article></a></li>
-                        <li><a href="about.html" class="button-style">Contact</a></li>
-                    </ul>
-                </div>
-            </section>
+<body id="grid-container">
+    <header>
+        <nav class="flex-container">
+            <picture>
+                <img src="resource/logo1.png" alt="logo">
+            </picture>
+            <ul class="navigation list-type-buttons">
+                <li><a href="index.html" class="button-style-3">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</article></a></li>
+                <li><a href="about.html" class="button-style-1">Contact</a></li>
+            </ul>
         </nav>
-        <header>
-            <section class="flex-container">
-                <article class="headline">
-                        <video autoplay muted loop class="vid-back">
-                            <source src="resource/mountains.mp4" type="video/mp4">
-                            Video is not supported by browser
-                        </video>
-                    <div class="headline-content">
+    </header>
+        <main>
+            <section class="flex-middle section-style-1">
+                <article>
+                    <video autoplay muted loop class="media-back-1">
+                        <source src="resource/mountains.mp4" type="video/mp4">
+                        Video is not supported by browser
+                    </video>
+                    <article class="headline-content">
                         <h1>Compelling Headline</h1>
-                        <p>Quisque mollis scelerisque orci, non suscipit mauris consectetur non. Ut vestibulum ultricies dictum. Curabitur faucibus nec leo sed vestibulum. Duis ac erat finibus, rhoncus tellus vitae, placerat sem. Curabitur iaculis metus in dui convallis, eu auctor sem dictum. Fusce condimentum tellus et velit commodo finibus. Etiam a accumsan est, sit amet pulvinar dolor. Morbi dictum justo nisi, a commodo velit iaculis et. Mauris porttitor hendrerit neque, ut sollicitudin dolor elementum eget. Praesent ultrices fermentum dui, id commodo mauris imperdiet sit amet. Sed nec nibh eget metus maximus lobortis sed sit amet mi. </p>
-                        <a href="products.html" class="button-style">Read More</a>
-                    </div>
+                        <p>Quisque mollis scelerisque orci, non suibubitur faucibusac erat finibus, rhoncus tellus vitae, placerat sem. Curabitur iaculis metus in dui convallis, eu auctor sem dictum. Fusce condimentum tellus et velit commodo finibus. Etiam a accumsan est, sit amet pulvinar dolor. Morbi dictum justo nisi, a commodo velit iaculis et imperdiet sit amet. Sed nec nibh eget metus maximus lobortis sed sit amet mi. </p>
+                        <a href="about.html" class="button-style-1">Read more about our services</a>
+                    </article>
                 </article>
             </section>
-            <section class="flex-container">
-                <article class="subheading">
+            <section class="flex-container section-style-2">
+                <article>
                     <h2>Engaging Subheading</h2>
                     <p>Integer sollicitudin, tortor luctus ornare suscipit, velit tellus laoreet ipsum, quis sollicitudin sem odio ut ex. Morbi posuere ullamcorper purus eget sodales. Sed turpis purus, sodales sit amet sagittis nec, consectetur sit amet odio. Donec tincidunt dui sed elit rhoncus, ut aliquam ligula lacinia. Vivamus ac diam diam. Nam maximus suscipit egestas. Vestibulum urna tellus, posuere vitae imperdiet rutrum, consectetur ac urna. Nulla nibh risus, blandit ac tristique nec, tempus ut massa. </p>
                 </article>
             </section>
-
-        </header>
-        <main>
-            <section>
-                
+            <section class="flex-container section-style-3">
+                <picture>
+                    <img src="resource/card.png" alt="Placeholder card">
+                </picture>
+                    <article>
+                        <h3>About our Company</h3>
+                        <p>Integer sollicitudin, tortor luctus ornare suscipit, velit tellus laoreet ipsum, quis sollicitudin sem odio ut ex. Morbi posuere ullamcorper purus eget sodales. Sed turpis purus, sodales sit amet sagittis nec, consectetur sit amet odio. Donec tincidunt dui sed elit rhoncus, ut aliquam ligula lacinia. Vivamus ac diam diam. Nam maximus suscipit egestas. Vestibulum urna tellus, posuere vitae imperdiet rutrum, consectetur ac urna. Nulla nibh risus, blandit ac tristique nec, tempus ut massa. </p>
+                        <a href="about.html" class="button-style-2">Read more about us</a>
+                    </article>                
+            </section>
+            <section class="section-style-4">
+                <h3>Our services</h3>
+                <ul>
+                    <li>
+                        <h4>Branding</h4>
+                        <p> Tristique nec, tempus ut massa. </p>
+                    </li>
+                    <li>
+                        <h4>Design</h4>
+                        <p>Integer sollicitudin, tortor luctus ornare suscipit </p>
+                    </li>
+                    <li>
+                        <h4>Development</h4>
+                        <p>I laoreet ipsum, quis sollicitudin sem odio ut ex. Morbi posuere ullamcorper.</p>     </article>
+                    <li>
+                        <h4>Support</h4>
+                        <p> Blandit ac tristique nec, sem odio ut ex. </p>
+                    </li>
+                </ul>
+            </section>
+            <section class="section-style-5">
+                <article>
+                    <h4>Sign up for our newsletter</h4>
+                        <form>
+                            <input type="text" name="signup">
+                            <a href="about.html" class="button-style-1">Sign Up</a>
+                        </form>
+                </article>
             </section>
         </main>
-        <footer>
-
+        <footer class="flex-container">
+            <picture class="flex-item-1">
+                <img src="resource/logo1.png" alt="logo" style="max-width: 80px;">
+            </picture>
+            <p>Copyright Companyname 2023</p>
+            <ul class="external flex-item-1">
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://no.linkedin.com/">Linkedin</article></a></li>
+            </ul>         
         </footer>
-    </div>
 </body>
 </html>

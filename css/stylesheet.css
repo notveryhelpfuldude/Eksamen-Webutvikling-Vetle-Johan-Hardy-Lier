@@ -2,11 +2,40 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+}
+img {
+    width: 100%;
 }
 #grid-container {
     display: grid;
-    grid-template-areas: 'nav nav' 'header header' 'main main' 'footer footer';
+    grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
+}
+.flex-container {
+    padding:0px;
+    width: 100%;
+    display: flex;
+}
+.flex-type-1 {
+    flex-wrap: wrap;
+}
+.flex-item-1 {
+    flex:33%;
+    padding: 10px;
+    max-width: 50%;
+}
+.flex-middle {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex-right {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
 }
 nav {
     grid-area: nav;
@@ -20,41 +49,38 @@ main {
     background-color: #fff
 }
 footer {
+    text-align: center;
     grid-area: footer;
-    background-color: #fff;
-}
-.flex-container {
-    padding:0px;
-    padding-top: 10px;
-    width: 100%;
-    display: flex;
+    background-color: #252525;
+    color:#fff;
 }
 header section {
     padding: 10px;
     justify-content: flex-start;
     align-items: center;
 }
-nav section {
+nav, footer {
     display: flex;
     flex-flow: wrap;   
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+}
+nav ul, nav img {
     padding: 10px;
-
 }
-nav section div {
-    display: flex;
-}
-.navigation {
-    display: flex;
-}
-.navigation li {
-    display: inline-block;
+.list-type-buttons li {
+    display: inline-flex;
     list-style-type: none;
     padding: 10px;
     margin: 10px;
 }
-.button-style {
+.navigation li a {
+    font-size: large;
+    color:black;
+    text-decoration: none;
+}
+.button-style-1 {
     background-color:#e6bd43;
     color: black;
     text-decoration: underline;
@@ -63,22 +89,36 @@ nav section div {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
     /* Denne Box shadow er hentet fra W3schools.com*/
 }
-.headline {
+.button-style-2 {
+    background-color:#fff;
+    border-style:solid;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0,0,0,0.24);
+    /* Denne Box shadow er hentet fra W3schools.com*/
+}
+.button-style-3 {
+    font-weight: bold; 
+    border-bottom-style: solid;
+    border-bottom-color:#e6bd43
+}
+.section-style-1 {
+    width: 100%;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: grey;
+    background-color: #fff;
 }
 .headline-content {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color:aqua;
+    color:#000;
     padding: 20px;
 }
-.vid-back {
+.media-back-1 {
+    opacity: 0.4;
     position:absolute;
     top: 0;
     left: 0;
@@ -86,7 +126,16 @@ nav section div {
     height: 100%;
     object-fit: cover;
 }
-.subheading {
+.media-back-2 {
+    opacity: 1;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.section-style-2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -94,22 +143,146 @@ nav section div {
     padding: 10px;
     margin-top: 20px;
 }
+.section-style-3 {
+    background-color: #e6bd43;
+    align-items: center;
+    padding: 40px;
+}
+.section-style-3 article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    width: 70%
+}
+.section-about picture {
+    max-width: 400px;
+    width: 30%;
+}
+.section-style-4 {
+    text-align: center;
+}
+.section-style-4 ul {
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.section-style-4 li{
+    font-size:14px;
+}
+.section-style-5 {
+    background-color: rgb(207, 207, 207);
+}
+.section-style-5 ul {
+    list-style-type: none;
+}
+.section-style-5 li{
+    display: inline-block;
+}
+.section-style-4 article {
+    padding: 10px;
+}
+.info-card-style {
+    background-color: #e4e4e4;
+    opacity: 0.8;
+    width: 50%;
+    padding: 20px;
+}
+.list-style-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+}
+footer picture {
+    padding:10px
+}
+footer p {
+    width: 30%;
+    overflow: hidden;
+}
+footer ul {
+    padding: 10px;
+}
+footer li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+}
+footer a {
+    font-size: large;
+    color:#fff;
+    text-decoration: none;
+}
 h1 {
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
 }
-h2 {
+h2, h3 {
+    padding: 20px;
+    width: 100%;
+    font-size: x-large;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color:#e6bd43
+}
+h4 {
+    font-size: large;
     text-align: center;
 }
-.headline p, .subheading p {
-    margin: 40px;
+h5 {
+    font-size: medium;
+    text-align: start;
+}
+p {
+    padding: 10px;
+}
+form {
+    text-align: center;
+}
+input {
+    height: 40px;
+}
+section {
+    padding: 40px;
 }
 @media (max-width: 768px) {
-    nav section {
+    nav, footer {
+        justify-content: center;
+    }
+    .flex-item-1 {
+        flex:100%;
+        max-width: 100%;
+    }
+    .navigation {
+        width: 100%;
+    }
+    .navigation li {
+        display: flex;
         justify-content: center;
     }
     .headline p {
         margin: 20px;
     }
-
+    .section-style-3 {
+        flex-direction: column;
+    }
+    .section-style-3 picture {
+        width: 80%;
+    }
+    .section-style-3 article {
+        width: 100%;
+    }
+    .section-style-4 ul {
+        flex-direction: column;
+    }
+    .info-card-style {
+        width: 100%;
+    }
+    .list-style-1 {
+        flex-direction: column;
+    }
 }
