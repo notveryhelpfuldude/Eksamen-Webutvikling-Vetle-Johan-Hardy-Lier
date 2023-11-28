@@ -229,6 +229,9 @@ nav ul, nav img {
 .list-style-2 li {
     display: block;
 }
+.contact-form {
+    text-align: center;
+}
 .hover-sizing {
     transition: transform 0.3s;
 }
@@ -288,7 +291,8 @@ h5 {
     font-size: medium;
     text-align: start;
 }
-p {
+p, label {
+    font-family: 'Poppins', sans-serif;
     padding: 10px;
     margin:0;
 }
@@ -296,8 +300,10 @@ i {
     font-size: 24px;
     padding: 10px;
 }
-input {
+input, textarea {
+    width: 50%;
     height: 40px;
+    padding: 10px;
 }
 #location-map {
     width: 100%;

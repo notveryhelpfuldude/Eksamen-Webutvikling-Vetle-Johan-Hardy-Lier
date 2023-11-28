@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/483aa3e004.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Poppins">
     <link rel="stylesheet" href="css/stylesheet.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,27 +75,15 @@
             <h3>Contact us</h3>
             <article class="info-card-style-2">
                 <h4>Send us a message</h4>
-                <ul class="list-style-2">
-                    <li>
-                        <p>name</p>
-                        <form>
-                            <input type="text" name="signup">
+                        <form class="contact-form">
+                            <label for="fname-field">Name</label><br>
+                            <input id="fname-field" type="text" name="signup"><br>
+                            <label for="subject-field">Subject</label><br>
+                            <input id="subject-field" type="text" name="signup"><br>
+                            <label for="message-field">Message</label><br>
+                            <textarea id="message-field" name="Message" rows="4" cols="50"></textarea><br><br>
+                            <input class="button-style-1" type="submit" value="Send">
                         </form>
-                    </li>
-                    <li>
-                        <p>name</p>
-                        <form>
-                            <input type="text" name="signup">
-                        </form>
-                    </li>
-                    <li>
-                        <p>name</p>
-                        <form>
-                            <input type="text" name="signup">
-                        </form>
-                    </li>
-                </ul>
-                    <a href="about.html" class="button-style-1">Sign Up</a>
             </article>
             <article class="info-card-style-2">
                 <h4>Contact Information</h4>
