@@ -8,6 +8,12 @@ body {
 img {
     width: 100%;
 }
+.icon-width-1 {
+    width: 80px;
+}
+.icon-width-2 {
+    width: 160px;
+}
 #grid-container {
     display: grid;
     grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
@@ -22,20 +28,33 @@ img {
 }
 .flex-item-1 {
     flex:33%;
-    padding: 10px;
-    max-width: 50%;
+    padding: 20px;
 }
 .flex-middle {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .flex-right {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
+}
+.flex-left {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.flex-space-around {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 nav {
     grid-area: nav;
@@ -105,6 +124,7 @@ nav ul, nav img {
     border-bottom-color:#e6bd43
 }
 .section-style-1 {
+    padding: 40px;
     width: 100%;
     position: relative;
     background-color: #fff;
@@ -136,12 +156,11 @@ nav ul, nav img {
     object-fit: cover;
 }
 .section-style-2 {
+    padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #ffffff;
-    padding: 10px;
-    margin-top: 20px;
 }
 .section-style-3 {
     background-color: #e6bd43;
@@ -161,6 +180,7 @@ nav ul, nav img {
 }
 .section-style-4 {
     text-align: center;
+    padding:40px;
 }
 .section-style-4 ul {
     display: inline-flex;
@@ -171,7 +191,7 @@ nav ul, nav img {
     font-size:14px;
 }
 .section-style-5 {
-    background-color: rgb(207, 207, 207);
+    padding:40px;
 }
 .section-style-5 ul {
     list-style-type: none;
@@ -182,19 +202,39 @@ nav ul, nav img {
 .section-style-4 article {
     padding: 10px;
 }
-.info-card-style {
+.info-card-style-1 {
     background-color: #e4e4e4;
     opacity: 0.8;
     width: 50%;
     padding: 20px;
 }
+.info-card-style-2 {
+    width: 50%;
+    padding: 20px;
+}
+.article-card {
+    max-width: 692px;
+}
 .list-style-1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
     list-style-type: none;
     padding: 10px;
+}
+.list-style-1 li {
+    display: inline;
+}
+.list-style-2 {
+    text-align: start;
+    list-style-type: none;
+    padding: 10px;
+}
+.list-style-2 li {
+    display: block;
+}
+.hover-sizing {
+    transition: transform 0.3s;
+}
+.hover-sizing:hover {
+    transform: scale(1.1);
 }
 footer picture {
     padding:10px
@@ -240,14 +280,29 @@ h5 {
 p {
     padding: 10px;
 }
-form {
-    text-align: center;
-}
 input {
     height: 40px;
 }
+/** 
 section {
-    padding: 40px;
+padding: 40px; 
+}
+**/
+#location-map {
+    width: 100%;
+}
+.link-top {
+    font-size: 24px;
+    text-align: center;
+    color:#fff;
+    text-decoration: none;
+    background-color:#252525;
+    position:fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 44px;
+    height: 60px;
+    padding-top: 20px;
 }
 @media (max-width: 768px) {
     nav, footer {
