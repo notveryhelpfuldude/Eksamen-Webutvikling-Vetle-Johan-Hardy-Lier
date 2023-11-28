@@ -236,10 +236,12 @@ nav ul, nav img {
     transform: scale(1.1);
 }
 .button-style-1:hover {
-    background-color:#ffd149;
+    background-color:#252525;
+    color: #e6bd43;
 }
 .button-style-2:hover {
-    background-color:#c9c9c9;
+    background-color:#252525;
+    color: #fff;
 }
 footer picture {
     padding:10px
@@ -263,10 +265,12 @@ footer a {
     text-decoration: none;
 }
 h1 {
+    font-family: 'roboto', Tahoma, Verdana;
     text-align: center;
     font-size: xx-large;
 }
 h2, h3 {
+    font-family: Tahoma, Verdana;
     padding: 20px;
     width: 100%;
     font-size: x-large;
@@ -275,15 +279,18 @@ h2, h3 {
     border-bottom-color:#e6bd43
 }
 h4 {
+    font-family: verdana;
     font-size: large;
     text-align: center;
 }
 h5 {
+    font-family: Verdana;
     font-size: medium;
     text-align: start;
 }
 p {
     padding: 10px;
+    margin:0;
 }
 i {
     font-size: 24px;
