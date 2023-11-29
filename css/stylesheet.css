@@ -117,12 +117,6 @@ nav ul, nav img {
     border-bottom-style: solid;
     border-bottom-color:#e6bd43
 }
-.section-style-1 {
-    padding: 40px;
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-}
 .headline-content {
     position: relative;
     display: flex;
@@ -149,11 +143,14 @@ nav ul, nav img {
     height: 100%;
     object-fit: cover;
 }
+.section-style-1 {
+    padding: 40px;
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+}
 .section-style-2 {
     padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     background-color: #ffffff;
 }
 .section-style-3 {
@@ -162,9 +159,6 @@ nav ul, nav img {
     padding: 40px;
 }
 .section-style-3 article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 40px;
     width: 70%
 }
@@ -176,22 +170,8 @@ nav ul, nav img {
     text-align: center;
     padding:40px;
 }
-.section-style-4 ul {
-    display: inline-flex;
-    list-style-type: none;
-    justify-content: center;
-}
-.section-style-4 li{
-    font-size:14px;
-}
 .section-style-5 {
     padding:40px;
-}
-.section-style-5 ul {
-    list-style-type: none;
-}
-.section-style-5 li{
-    display: inline-block;
 }
 .section-style-4 article {
     padding: 10px;
@@ -227,7 +207,7 @@ nav ul, nav img {
     padding: 10px;
 }
 .list-style-2 li {
-    display: block;
+    display: inline;
 }
 .contact-form {
     text-align: center;
