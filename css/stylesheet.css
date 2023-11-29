@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+/**
+    Max-width ble vedtatt på body dette vil da også påvirke bredden
+    header og footer. Ellers kunne jeg brukt dette på main for å 
+    begrense størrelsen på det istedet. chatGPT hjalp meg med å plassere
+    innholdet på midten ved å legge til "auto" til margin:0.
+**/
 body {
     margin: 0 auto;
     max-width: 1600px;
@@ -14,7 +20,11 @@ img {
 .icon-width-2 {
     width: 160px;
 }
-#grid-container {
+/**
+    Griddet er basert på egen forståelse av grid og kan være forskjellig fra det
+    som var undervist. Jeg tok i utgangspunkt w3schools sin forklaring av det. 
+**/
+#grid-main {
     display: grid;
     grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
 }
@@ -22,13 +32,6 @@ img {
     padding:0px;
     width: 100%;
     display: flex;
-}
-.flex-type-1 {
-    flex-wrap: wrap;
-}
-.flex-item-1 {
-    flex:33%;
-    padding: 20px;
 }
 .flex-middle {
     width: 100%;
@@ -56,6 +59,13 @@ img {
     justify-content: space-around;
     align-items: center;
 }
+.flex-type-1 {
+    flex-wrap: wrap;
+}
+.flex-item-1 {
+    flex:33%;
+    padding: 20px;
+}
 nav {
     grid-area: nav;
     background-color: #fff;
@@ -65,7 +75,7 @@ header {
 }
 main {
     grid-area: main;
-    background-color: #fff
+    background-color: #fff;
 }
 footer {
     text-align: center;
@@ -115,7 +125,7 @@ nav ul, nav img {
 .button-style-3 {
     font-weight: bold; 
     border-bottom-style: solid;
-    border-bottom-color:#e6bd43
+    border-bottom-color:#e6bd43;
 }
 .headline-content {
     position: relative;
@@ -125,6 +135,13 @@ nav ul, nav img {
     color:#000;
     padding: 20px;
 }
+/**
+    chatGPT hjalp meg med å plassere mediet riktig slik at den fyller
+    boksen den befinner seg i.
+    object-fit: cover; plasserer mediet slik at den fyller hele innholdet men
+    strekker og klemmer den ikke for å få den til å passe, men heller dekker
+    over de delene av det som ikke passer med det som befinner seg rundt. 
+**/
 .media-back-1 {
     opacity: 0.4;
     position:absolute;
@@ -160,7 +177,7 @@ nav ul, nav img {
 }
 .section-style-3 article {
     padding: 40px;
-    width: 70%
+    width: 70%;
 }
 .section-about picture {
     max-width: 400px;
@@ -176,6 +193,10 @@ nav ul, nav img {
 .section-style-4 article {
     padding: 10px;
 }
+/**
+    z-indeks plasserer kortet foran bilder jeg bruker som bakgrunn
+    dette var en idé fra chatGPT
+**/
 .info-card-style-1 {
     background-color: #e4e4e4be;
     z-index: 1;
@@ -212,6 +233,13 @@ nav ul, nav img {
 .contact-form {
     text-align: center;
 }
+/**
+    Koden under var laget med støtte fra chatGPT
+    jeg forsøkte å bruke width istedet for Transform: scale()
+    men det økte størrelsen på boksen bildet befant seg i og dyttet
+    andre elementer bort. Transform scale øker også størrelsen
+    på bildet jevnt på alle sider istedenfor bare på høyresiden.
+**/
 .hover-sizing {
     transition: transform 0.3s;
 }
@@ -271,7 +299,7 @@ h5 {
     font-size: medium;
     text-align: start;
 }
-p, label {
+p, label, a {
     font-family: 'Poppins', sans-serif;
     padding: 10px;
     margin:0;
@@ -288,6 +316,10 @@ input, textarea {
 #location-map {
     width: 100%;
 }
+/**
+    Deler av .link-top ble laget med støtte av chatGPT. Var brukt bare
+    for å finne ut hvordan man plasserer en sitter på en fast plassering på skjermen.
+**/
 .link-top {
     font-size: 24px;
     text-align: center;
@@ -301,13 +333,56 @@ input, textarea {
     height: 60px;
     padding-top: 20px;
 }
-@media (max-width: 768px) {
+/**
+    Skip content innholdet under er hentet fra en tidligere oppgave
+**/
+.skip-content {
+    position: absolute;
+    top: auto;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-content:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+@media (max-width: 900px) {
+    /**
+    Når sidebredden er under 900px vil griddet på siden endre seg til enkel kolonne.
+    Derimot det har ikke stor innvirkning på layout til siden fordi mye av strukturen 
+    var strukturert slik at innholdet virket som om det var i en enkel kolonne uansett. 
+    **/
+    #grid-main {
+        grid-template-areas: 'header' 'main' 'footer';
+    }
+    .flex-item-1 {
+        flex:50%;
+    }
+    .info-card-style-1 {
+        width: 100%;
+    }
+    .info-card-style-2 {
+        width: 100%;
+    }
+    .section-style-3 picture {
+        width: 80%;
+    }
+    .section-style-3 article {
+        width: 100%;
+    }
+    .section-style-3 {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
     nav, footer {
         justify-content: center;
     }
     .flex-item-1 {
         flex:100%;
-        max-width: 100%;
     }
     .navigation {
         width: 100%;
@@ -319,23 +394,8 @@ input, textarea {
     .headline p {
         margin: 20px;
     }
-    .section-style-3 {
-        flex-direction: column;
-    }
-    .section-style-3 picture {
-        width: 80%;
-    }
-    .section-style-3 article {
-        width: 100%;
-    }
     .section-style-4 ul {
         flex-direction: column;
-    }
-    .info-card-style-1 {
-        width: 100%;
-    }
-    .info-card-style-2 {
-        width: 100%;
     }
     .list-style-1 {
         flex-direction: column;
